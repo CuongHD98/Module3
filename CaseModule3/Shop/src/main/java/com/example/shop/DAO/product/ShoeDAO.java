@@ -12,11 +12,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ShoeDAO {
-    private static final String INSERT_SHOE_SQL = "INSERT INTO shoes (image_id,name,description,time) VALUES (?,?,?,?);";
+    private static final String INSERT_SHOE_SQL = "INSERT INTO shoes (image_id,name,description,time,price) VALUES (?,?,?,?,?);";
     private static final String SELECT_SHOE_BY_ID = "select * from shoes where id =?";
     private static final String SELECT_ALL_SHOE= "select * from shoes";
     private static final String DELETE_SHOE_SQL = "delete from shoes where id = ?;";
-    private static final String UPDATE_SHOE_SQL = "update shoes set image_id = ?,name = ?,description = ?,time = ? where id = ?;";
+    private static final String UPDATE_SHOE_SQL = "update shoes set image_id = ?,name = ?,description = ?,time = ?, price = ? where id = ?;";
 
     public ShoeDAO() {
     }
@@ -27,6 +27,7 @@ public class ShoeDAO {
             preparedStatement.setString(2, shoe.getName());
             preparedStatement.setString(3, shoe.getDescription());
             preparedStatement.setString(4, shoe.getTime());
+            preparedStatement.setFloat(5, shoe.getPrice());
             preparedStatement.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();
@@ -42,7 +43,8 @@ public class ShoeDAO {
                 String name = rs.getString("name");
                 String description = rs.getString("description");
                 String time = rs.getString("time");
-                shoe = new Shoe(id, image_id, name, description, time);
+                float price = rs.getFloat("price");
+                shoe = new Shoe(id, image_id, name, description, time, price);
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -60,7 +62,8 @@ public class ShoeDAO {
                 String name = rs.getString("name");
                 String description = rs.getString("description");
                 String time = rs.getString("time");
-                shoes.add(new Shoe(id, name, description, time));
+                float price = rs.getFloat("price");
+                shoes.add(new Shoe(id,image_id,name, description, time, price));
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -84,7 +87,8 @@ public class ShoeDAO {
             statement.setString(2, shoe.getName());
             statement.setString(3, shoe.getDescription());
             statement.setString(4, shoe.getTime());
-            statement.setInt(5, shoe.getId());
+            statement.setFloat(5, shoe.getPrice());
+            statement.setInt(6, shoe.getId());
 
             rowUpdated = statement.executeUpdate() > 0;
         }

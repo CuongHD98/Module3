@@ -591,6 +591,7 @@
                                             <th>Name</th>
                                             <th>Description</th>
                                             <th>Time</th>
+                                            <th>Price</th>
                                             <th class="disabled-sorting text-right">Actions</th>
                                         </tr>
                                         </thead>
@@ -602,6 +603,7 @@
                                                 <td><c:out value="${shoe.name}"/></td>
                                                 <td><c:out value="${shoe.description}"/></td>
                                                 <td><c:out value="${shoe.time}"/></td>
+                                                <td><c:out value="${shoe.price}"/></td>
                                                 <td class="disabled-sorting text-right">
                                                     <a href="/admin/shoe?action=edit&id=${shoe.id}" class="btn btn-info" role="button">Edit</a>
                                                     <a href="/admin/shoe?action=delete&id=${shoe.id}" class="btn btn-info" role="button">Delete</a>

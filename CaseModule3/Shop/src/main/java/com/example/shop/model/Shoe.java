@@ -6,20 +6,23 @@ public class Shoe {
     private String name;
     private String description;
     private String time;
+    private float price;
 
-    public Shoe(int image_id, String name, String description, String time) {
+    public Shoe(int image_id, String name, String description, String time, float price) {
         this.image_id = image_id;
         this.name = name;
         this.description = description;
         this.time = time;
+        this.price = price;
 
     }
-    public Shoe(int id, int image_id, String name, String description, String time) {
+    public Shoe(int id, int image_id, String name, String description, String time, float price) {
         this.id = id;
         this.image_id = image_id;
         this.name = name;
         this.description = description;
         this.time = time;
+        this.price = price;
     }
 
     public int getId() {
@@ -60,5 +63,13 @@ public class Shoe {
 
     public void setTime(String time) {
         this.time = time;
+    }
+
+    public float getPrice() {
+        return price;
+    }
+
+    public void setPrice(float price) {
+        this.price = price;
     }
 }

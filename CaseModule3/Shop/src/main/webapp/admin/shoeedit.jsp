@@ -336,6 +336,7 @@
                                             <th>Name</th>
                                             <th>Description</th>
                                             <th>Time</th>
+                                            <th>Price</th>
                                             <th class="disabled-sorting text-right">Actions</th>
                                         </tr>
                                         </thead>
@@ -346,6 +347,7 @@
                                             <td><c:out value="${shoe.name}"/></td>
                                             <td><c:out value="${shoe.description}"/></td>
                                             <td><c:out value="${shoe.time}"/></td>
+                                            <td><c:out value="${shoe.price}"/></td>
                                             <td class="disabled-sorting text-right">
                                                 <a href="/admin/shoe?action=edit&id=${shoe.id}" class="btn btn-info" role="button">Edit</a>
                                                 <a href="/admin/shoe?action=delete&id=${shoe.id}" class="btn btn-info" role="button">Delete</a>
@@ -400,6 +402,10 @@
                                         <div class="form-group bmd-form-group is-filled">
                                             <label for="time" class="bmd-label-floating">Time</label>
                                             <input type="text" class="form-control" id="time" name="time" value="${shoe.time}">
+                                        </div>
+                                        <div class="form-group bmd-form-group is-filled">
+                                            <label for="price" class="bmd-label-floating">Price</label>
+                                            <input type="text" class="form-control" id="price" name="price" value="${shoe.price}">
                                         </div>
                                     </div>
                                     <div class="card-footer ">

@@ -597,7 +597,7 @@
                                             <tr>
                                                 <td><c:out value="${image.id}"/></td>
                                                 <td><c:out value="${image.url}"/></td>
-                                                <td><img src="${image.url}" style="width: 50px", height="30px"></td>
+                                                <td><img src="${image.url}" style="width: 50px" height="30px"></td>
                                                 <td class="disabled-sorting text-right">
                                                     <a href="/admin/image?action=edit&id=${image.id}" class="btn btn-info" role="button">Edit</a>
                                                     <a href="/admin/image?action=delete&id=${image.id}" class="btn btn-info" role="button">Delete</a>

@@ -14,6 +14,7 @@ import java.util.List;
 public class AccountDAO {
     private static final String INSERT_ACCOUNT_SQL = "INSERT INTO accounts (name,gender,birthday,phone,address, email, password, role) VALUES (?, ?, ?, ?, ?, ?, ?, ?);";
     private static final String SELECT_ACCOUNT_BY_ID = "select * from accounts where id =?";
+    private static final String SELECT_ACCOUNT_BY_EMAIL_PASSWORD = "select * from accounts where email = ? and password = ?";
     private static final String SELECT_ALL_ACCOUNT = "select * from accounts";
     private static final String DELETE_ACCOUNT_SQL = "delete from accounts where id = ?;";
     private static final String UPDATE_ACCOUNT_SQL = "update accounts set name = ?,gender = ?,birthday = ?,phone = ?, address = ?, email = ?, password = ? where id = ?;";
@@ -106,5 +107,27 @@ public class AccountDAO {
             rowUpdated = statement.executeUpdate() > 0;
         }
         return rowUpdated;
+    }
+
+    public Account selectAccount(String email, String password) {
+        Account account = null;
+        try (PreparedStatement preparedStatement = connection.prepareStatement(SELECT_ACCOUNT_BY_EMAIL_PASSWORD);) {
+            preparedStatement.setString(1, email);
+            preparedStatement.setString(2, password);
+            ResultSet rs = preparedStatement.executeQuery();
+            while (rs.next()) {
+                int id = rs.getInt("id");
+                String name = rs.getString("name");
+                String gender = rs.getString("gender");
+                String birthday = rs.getString("birthday");
+                String phone = rs.getString("phone");
+                String address = rs.getString("address");
+                String role = rs.getString("role");
+                account = new Account(id, name, gender, birthday, phone, address, email, password, role);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return account;
     }
 }

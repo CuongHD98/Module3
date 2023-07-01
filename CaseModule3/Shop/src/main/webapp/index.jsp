@@ -1,6 +1,5 @@
-<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,11 +13,13 @@
     <link rel="stylesheet" href="/css/owl.carousel.min.css" type="text/css">
     <link rel="stylesheet" href="/css/owl.theme.default.min.css" type="text/css">
     <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link rel="stylesheet" href="/css/viewcart.css">
 
     <!-- UIkit CSS -->
-    <link rel="stylesheet" href="/plugins/uikit/uikit.min.css" />
+    <link rel="stylesheet" href="/plugins/uikit/uikit.min.css"/>
 
     <title>Runner</title>
+
 
 </head>
 
@@ -43,28 +44,6 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="product.html">BỘ SƯU TẬP</a>
-                </li>
-                <li class="nav-item lisanpham">
-                    <a class="nav-link" href="detailproduct.html">SẢN PHẨM
-                        <i class="fa fa-chevron-down" aria-hidden="true"></i>
-                    </a>
-                    <ul class="sub_menu">
-                        <li class="">
-                            <a href="detailproduct.html" title="Sản phẩm - Style 1">
-                                Sản phẩm - Style 1
-                            </a>
-                        </li>
-                        <li class="">
-                            <a href="detailproduct.html" title="Sản phẩm - Style 2">
-                                Sản phẩm - Style 2
-                            </a>
-                        </li>
-                        <li class="">
-                            <a href="detailproduct.html" title="Sản phẩm - Style 3">
-                                Sản phẩm - Style 3
-                            </a>
-                        </li>
-                    </ul>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="introduce.html">GIỚI THIỆU</a>
@@ -95,19 +74,6 @@
                         <li class="nav-item">
                             <a class="nav-link" href="Product.html">BỘ SƯU TẬP</a>
                         </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle aaaa"  href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                               aria-haspopup="true" aria-expanded="false" >
-                                <p>SẢN PHẨM</p>
-                                <i class="fa fa-angle-double-right"></i>
-
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="border:0;">
-                                <a class="dropdown-item" href="detailproduct.html" title="Sản phẩm - Style 1">Sản phẩm - Style 1</a>
-                                <a class="dropdown-item" href="detailproduct.html" title="Sản phẩm - Style 2">Sản phẩm - Style 2</a>
-                                <a class="dropdown-item" href="detailproduct.html" title="Sản phẩm - Style 3">Sản phẩm - Style 3</a>
-                            </div>
-                        </li>
                         <li class="nav-item">
                             <a class="nav-link" href="introduce.html">GIỚI THIỆU</a>
                         </li>
@@ -119,7 +85,6 @@
                         </li>
                     </ul>
                 </div>
-
             </div>
         </div>
         <div id="offcanvas-flip" uk-offcanvas="flip: true; overlay: true">
@@ -168,12 +133,22 @@
                             <tbody>
                             <tr class="item_1">
                                 <td class="img"><a href="" title="Nike Air Max 90 Essential &quot;Grape&quot;"><img
-                                        src="/images/shoes/1.jpg" alt="/products/nike-air-max-90-essential-grape"></a></td>
+                                        src="/images/shoes/1.jpg" alt="/products/nike-air-max-90-essential-grape"></a>
+                                </td>
                                 <td>
                                     <a class="pro-title-view" style="color: #272727" href=""
-                                       title="Nike Air Max 90 Essential &quot;Grape&quot;">Nike Air Max 90 Essential "Grape"</a>
+                                       title="Nike Air Max 90 Essential &quot;Grape&quot;">Nike Air Max 90 Essential
+                                        "Grape"</a>
                                     <span class="variant">Tím / 36</span>
-                                    <span class="pro-quantity-view">1</span>
+                                    <span class="pro-quantity-view">
+                                        <div class="quantity-picker">
+                                            <div class="quantity-controls">
+                                            <button type="button" class="quantity-decrease">-</button>
+                                            <input type="text" id="quantity-input" min="1" value="1">
+                                            <button type="button" class="quantity-increase">+</button>
+                                            </div>
+                                         </div>
+                                    </span>
                                     <span class="pro-price-view">4,800,000₫</span>
                                     <span class="remove_link remove-cart"><a href=""><i style="color: #272727;"
                                                                                         class="fas fa-times"></i></a></span>
@@ -189,30 +164,20 @@
                                 <td class="text-right" id="total-view-cart">4,800,000₫</td>
                             </tr>
                             <tr>
-                                <td class="distance-td"><a href="" class="linktocart button dark">Xem giỏ hàng</a></td>
-                                <td><a href="" class="linktocheckout button dark">Thanh toán</a></td>
+                                <td><a href="viewcart.html" class="linktocheckout btn btn-success" style="color: white">Thanh toán</a></td>
                             </tr>
                             </tbody>
                         </table>
-
-                        <a href="" target="_blank" class="button btn-check" style="text-decoration:none;"><span>Click nhận mã giảm
-                  giá ngay !</span></a>
                     </div>
                 </div>
             </div>
         </div>
 
         <div class="icon-ol">
-            <a style="color: #272727" href="">
+            <a style="color: #272727" href="/login">
                 <i class="fas fa-user-alt"></i>
             </a>
-            <a href="#" class="" uk-toggle="target: #offcanvas-flip">
-                <i class="fas fa-search" style="color: black"></i>
-            </a>
 
-            <a style="color: #272727" href="#" uk-toggle="target: #offcanvas-flip2">
-                <i class="fas fa-shopping-cart"></i>
-            </a>
             <button class="navbar-toggler" type="button" uk-toggle="target: #offcanvas-flip1" data-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -341,6 +306,7 @@
         <div class="row">
             <div class="col-md-3 col-sm-6 col-xs-6 col-6">
                 <div class="product-block">
+
                     <div class="product-img fade-box">
                         <a href="#" title="Adidas Yeezy boost 350 v2" class="img-resize">
                             <img class="lazyloaded" src="/images/shoes/800502_01_e92c3b2bb8764b52a791846d84a3a360_grande.jpg"
@@ -349,6 +315,7 @@
                         </a>
 
                     </div>
+
                     <div class="product-detail clearfix">
                         <div class="pro-text">
                             <a style=" color: black;
@@ -437,6 +404,7 @@
             </div>
         </div>
     </div>
+
     <section class="section wrapper-home-banner">
         <div class="container-fluid" style="padding-bottom: 50px;">
             <div class="row">
@@ -488,6 +456,7 @@
             </div>
         </div>
     </section>
+
     <section>
         <div class="content">
             <div class="container">
@@ -509,16 +478,19 @@
                         <div class="product-block">
                             <div class="product-img fade-box">
                                 <a href="#" title="Adidas Ultraboost W" class="img-resize">
-                                    <img src="/images/shoes/801432_01_b16d089f8bda434bacfe4620e8480be1_grande.jpg" alt="Adidas Ultraboost W"
+                                    <img src="/images/shoes/801432_01_b16d089f8bda434bacfe4620e8480be1_grande.jpg"
+                                         alt="Adidas Ultraboost W"
                                          class="lazyloaded">
-                                    <img src="/images/shoes/shoes fade 4.jpg" alt="Adidas Ultraboost W" class="lazyloaded">
+                                    <img src="/images/shoes/shoes fade 4.jpg" alt="Adidas Ultraboost W"
+                                         class="lazyloaded">
                                 </a>
 
                             </div>
                             <div class="product-detail clearfix">
                                 <div class="pro-text">
                                     <a style=" color: black;
-                           font-size: 14px;text-decoration: none;" href="#" title="Adidas Ultraboost W" inspiration pack>
+                           font-size: 14px;text-decoration: none;" href="#" title="Adidas Ultraboost W" inspiration
+                                       pack>
                                         Adidas Ultraboost W
                                     </a>
                                 </div>
@@ -529,137 +501,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="item">
-                    <div class="">
-                        <div class="product-block">
-                            <div class="product-img fade-box">
-                                <a href="#" title="Adidas Ultraboost W" class="img-resize">
-                                    <img src="/images/shoes/801432_01_b16d089f8bda434bacfe4620e8480be1_grande.jpg" alt="Adidas Ultraboost W"
-                                         class="lazyloaded">
-                                    <img src="/images/shoes/shoes fade 4.jpg" alt="Adidas Ultraboost W" class="lazyloaded">
-                                </a>
-
-                            </div>
-                            <div class="product-detail clearfix">
-                                <div class="pro-text">
-                                    <a style=" color: black;
-                           font-size: 14px;text-decoration: none;" href="#" title="Adidas Ultraboost W" inspiration pack>
-                                        Adidas Ultraboost W
-                                    </a>
-                                </div>
-                                <div class="pro-price">
-                                    <p class="">5,300,000₫</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="">
-                        <div class="product-block">
-                            <div class="product-img fade-box">
-                                <a href="#" title="Adidas Ultraboost W" class="img-resize">
-                                    <img src="/images/shoes/801432_01_b16d089f8bda434bacfe4620e8480be1_grande.jpg" alt="Adidas Ultraboost W"
-                                         class="lazyloaded">
-                                    <img src="/images/shoes/shoes fade 4.jpg" alt="Adidas Ultraboost W" class="lazyloaded">
-                                </a>
-
-                            </div>
-                            <div class="product-detail clearfix">
-                                <div class="pro-text">
-                                    <a style=" color: black;
-                           font-size: 14px;text-decoration: none;" href="#" title="Adidas Ultraboost W" inspiration pack>
-                                        Adidas Ultraboost W
-                                    </a>
-                                </div>
-                                <div class="pro-price">
-                                    <p class="">5,300,000₫</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="">
-                        <div class="product-block">
-                            <div class="product-img fade-box">
-                                <a href="#" title="Adidas Ultraboost W" class="img-resize">
-                                    <img src="/images/shoes/801432_01_b16d089f8bda434bacfe4620e8480be1_grande.jpg" alt="Adidas Ultraboost W"
-                                         class="lazyloaded">
-                                    <img src="/images/shoes/shoes fade 4.jpg" alt="Adidas Ultraboost W" class="lazyloaded">
-                                </a>
-
-                            </div>
-                            <div class="product-detail clearfix">
-                                <div class="pro-text">
-                                    <a style=" color: black;
-                           font-size: 14px;text-decoration: none;" href="#" title="Adidas Ultraboost W" inspiration pack>
-                                        Adidas Ultraboost W
-                                    </a>
-                                </div>
-                                <div class="pro-price">
-                                    <p class="">5,300,000₫</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="">
-                        <div class="product-block">
-                            <div class="product-img fade-box">
-                                <a href="#" title="Adidas Ultraboost W" class="img-resize">
-                                    <img src="/images/shoes/801432_01_b16d089f8bda434bacfe4620e8480be1_grande.jpg" alt="Adidas Ultraboost W"
-                                         class="lazyloaded">
-                                    <img src="/images/shoes/shoes fade 4.jpg" alt="Adidas Ultraboost W" class="lazyloaded">
-                                </a>
-
-                            </div>
-                            <div class="product-detail clearfix">
-                                <div class="pro-text">
-                                    <a style=" color: black;
-                           font-size: 14px;text-decoration: none;" href="#" title="Adidas Ultraboost W" inspiration pack>
-                                        Adidas Ultraboost W
-                                    </a>
-                                </div>
-                                <div class="pro-price">
-                                    <p class="">5,300,000₫</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="">
-                        <div class="product-block">
-                            <div class="product-img fade-box">
-                                <a href="#" title="Adidas Ultraboost W" class="img-resize">
-                                    <img src="/images/shoes/801432_01_b16d089f8bda434bacfe4620e8480be1_grande.jpg" alt="Adidas Ultraboost W"
-                                         class="lazyloaded">
-                                    <img src="/images/shoes/shoes fade 4.jpg" alt="Adidas Ultraboost W" class="lazyloaded">
-                                </a>
-
-                            </div>
-                            <div class="product-detail clearfix">
-                                <div class="pro-text">
-                                    <a style=" color: black;
-                           font-size: 14px;text-decoration: none;" href="#" title="Adidas Ultraboost W" inspiration pack>
-                                        Adidas Ultraboost W
-                                    </a>
-                                </div>
-                                <div class="pro-price">
-                                    <p class="">5,300,000₫</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
             </div>
-
-
-
-
         </div>
     </section>
     <section class="">
@@ -669,7 +511,7 @@
                     <h2 style="text-align:center;padding-top: 10px">
                         <a style="font-size: 28px;color: black;text-decoration: none" href="">Bài viết mới nhất</a>
                     </h2>
-                    <br />
+                    <br/>
                 </div>
             </div>
         </div>
@@ -775,14 +617,16 @@
         <div class="container-fluid">
             <div class="content-newsletter">
                 <h2>Đăng ký</h2>
-                <p>Đăng ký nhận bản tin của Runner Inn để cập nhật những sản phẩm mới, nhận thông tin ưu đãi đặc biệt và thông
+                <p>Đăng ký nhận bản tin của Runner Inn để cập nhật những sản phẩm mới, nhận thông tin ưu đãi đặc biệt và
+                    thông
                     tin
                     giảm giá khác.</p>
                 <div class="form-newsletter">
                     <form action="" accept-charset="UTF-8" class="">
                         <div class="form-group">
                             <input type="hidden" id="contact_tags">
-                            <input required="" type="email" value="" placeholder="Nhập email của bạn" aria-label="Email Address"
+                            <input required="" type="email" value="" placeholder="Nhập email của bạn"
+                                   aria-label="Email Address"
                                    class="">
                             <button type="submit" class=""><span>Gửi</span></button>
                         </div>
@@ -844,7 +688,8 @@
                                 Giới thiệu
                             </h4>
                             <div class="footer-content">
-                                <p>Runner Inn trang mua sắm trực tuyến của thương hiệu giày, thời trang nam, nữ, phụ kiện, giúp bạn
+                                <p>Runner Inn trang mua sắm trực tuyến của thương hiệu giày, thời trang nam, nữ, phụ
+                                    kiện, giúp bạn
                                     tiếp
                                     cận xu hướng thời trang mới nhất.</p>
                                 <div class="logo-footer">
@@ -893,7 +738,9 @@
                             </h4>
                             <div class="footer-content toggle-footer">
                                 <ul>
-                                    <li><span>Địa chỉ:</span> 1 Đại Cồ Việt, Bách Khoa, Quận Hai Bà Trưng, TP. Hà Nội, Vietnam</li>
+                                    <li><span>Địa chỉ:</span> 1 Đại Cồ Việt, Bách Khoa, Quận Hai Bà Trưng, TP. Hà Nội,
+                                        Vietnam
+                                    </li>
                                     <li><span>Điện thoại:</span> +84 986640945</li>
                                     <li><span>Fax:</span> +84 1233456789</li>
                                     <li><span>Mail:</span> cuong.hd160536@sis.hust.edu.vn</li>
@@ -909,12 +756,17 @@
                             <div class="footer-content">
                                 <div id="fb-root">
                                     <div class="footer-static-content">
-                                        <div class="fb-page" data-href="https://www.facebook.com/AziWorld-Viet-Nam-908555669481794/"
-                                             data-tabs="timeline" data-width="" data-height="215" data-small-header="false"
-                                             data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
-                                            <blockquote cite="https://www.facebook.com/AziWorld-Viet-Nam-908555669481794/"
-                                                        class="fb-xfbml-parse-ignore"><a
-                                                    href="https://www.facebook.com/AziWorld-Viet-Nam-908555669481794/">AziWorld Viet Nam</a>
+                                        <div class="fb-page"
+                                             data-href="https://www.facebook.com/AziWorld-Viet-Nam-908555669481794/"
+                                             data-tabs="timeline" data-width="" data-height="215"
+                                             data-small-header="false"
+                                             data-adapt-container-width="true" data-hide-cover="false"
+                                             data-show-facepile="true">
+                                            <blockquote
+                                                    cite="https://www.facebook.com/AziWorld-Viet-Nam-908555669481794/"
+                                                    class="fb-xfbml-parse-ignore"><a
+                                                    href="https://www.facebook.com/AziWorld-Viet-Nam-908555669481794/">AziWorld
+                                                Viet Nam</a>
                                             </blockquote>
                                         </div>
                                     </div>
@@ -943,7 +795,7 @@
                     <span>Sản phẩm mới</span>
                 </li>
                 <li>
-                    <span>Sản phẩm bán chạy </span>
+                    <span>Sản phẩm bán chạy</span>
                 </li>
             </ul>
             <input type="text" placeholder="Đăng kí nhận thông tin">
@@ -961,6 +813,7 @@
 <script src="/js/script.js"></script>
 <script src="/plugins/uikit/uikit.min.js"></script>
 <script src="/plugins/uikit/uikit-icons.min.js"></script>
+<script src="/js/cartInMain.js"></script>
 </body>
 
 </html>

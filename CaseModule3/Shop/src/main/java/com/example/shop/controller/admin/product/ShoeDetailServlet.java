@@ -87,9 +87,9 @@ public class ShoeDetailServlet extends HttpServlet {
     private void showEditForm(HttpServletRequest request, HttpServletResponse response)
             throws SQLException, ServletException, IOException {
         int id = Integer.parseInt(request.getParameter("id"));
-        ShoeDetail shoeDetail = shoeDetailDAO.selectShoeDetail(id);
+        ShoeDetail shoedetail = shoeDetailDAO.selectShoeDetail(id);
         RequestDispatcher dispatcher = request.getRequestDispatcher("/admin/shoedetailedit.jsp");
-        request.setAttribute("shoeDetail", shoeDetail);
+        request.setAttribute("shoedetail", shoedetail);
         dispatcher.forward(request, response);
     }
 

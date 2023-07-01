@@ -40,9 +40,9 @@ public class ShoeDetailDAO {
             ResultSet rs = preparedStatement.executeQuery();
             while (rs.next()) {
                 int shoe_id = rs.getInt("shoe_id");
-                int color_id = rs.getInt("shoe_id");
-                int size_id = rs.getInt("shoe_id");
-                int quantity = rs.getInt("shoe_id");
+                int color_id = rs.getInt("color_id");
+                int size_id = rs.getInt("size_id");
+                int quantity = rs.getInt("quantity");
                 shoeDetail = new ShoeDetail(id, shoe_id, color_id, size_id, quantity);
             }
         } catch (SQLException e) {
@@ -58,9 +58,9 @@ public class ShoeDetailDAO {
             while (rs.next()) {
                 int id = rs.getInt("id");
                 int shoe_id = rs.getInt("shoe_id");
-                int color_id = rs.getInt("shoe_id");
-                int size_id = rs.getInt("shoe_id");
-                int quantity = rs.getInt("shoe_id");
+                int color_id = rs.getInt("color_id");
+                int size_id = rs.getInt("size_id");
+                int quantity = rs.getInt("quantity");
                 shoeDetails.add(new ShoeDetail(id, shoe_id, color_id, size_id, quantity));
             }
         } catch (SQLException e) {

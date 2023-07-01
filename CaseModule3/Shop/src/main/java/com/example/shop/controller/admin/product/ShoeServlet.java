@@ -99,8 +99,9 @@ public class ShoeServlet extends HttpServlet {
         String name = request.getParameter("name");
         String description = request.getParameter("description");
         String time = request.getParameter("time");
+        float price = Float.parseFloat(request.getParameter("price"));
 
-        Shoe shoe = new Shoe(image_id,name,description,time);
+        Shoe shoe = new Shoe(image_id,name,description,time,price);
         shoeDAO.insertShoe(shoe);
         response.sendRedirect("/admin/shoe");
     }
@@ -112,7 +113,9 @@ public class ShoeServlet extends HttpServlet {
         String name = request.getParameter("name");
         String description = request.getParameter("description");
         String time = request.getParameter("time");
-        Shoe shoe = new Shoe(id,image_id,name,description,time);
+        float price = Float.parseFloat(request.getParameter("price"));
+
+        Shoe shoe = new Shoe(id,image_id,name,description,time, price);
         shoeDAO.updateShoe(shoe);
         response.sendRedirect("/admin/shoe");
     }

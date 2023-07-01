@@ -595,7 +595,7 @@
                                         </tr>
                                         </thead>
                                         <tbody>
-                                        <c:forEach var="shoedetail" items="${shoedetailList}">
+                                        <c:forEach var="shoedetail" items="${shoeDetailList}">
                                             <tr>
                                                 <td><c:out value="${shoedetail.id}"/></td>
                                                 <td><c:out value="${shoedetail.shoe_id}"/></td>
