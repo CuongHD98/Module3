@@ -49,7 +49,7 @@ $(document).ready(function () {
 //       draggable: true,
 //     });
 //     if($(window).width() > 768){
-//       var ncurrent = parseInt($(".gallery-index .current").html()) - 1;
+//       var ncurrent = parseInt($(".gallery-index .current")()) - 1;
 //     }
 //     else{
 //       var ncurrent = parseInt($(".product-gallery-item.is-selected").index());

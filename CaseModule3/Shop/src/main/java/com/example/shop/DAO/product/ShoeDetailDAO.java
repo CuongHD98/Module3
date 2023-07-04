@@ -14,6 +14,7 @@ import java.util.List;
 public class ShoeDetailDAO {
     private static final String INSERT_SHOEDETAIL_SQL = "INSERT INTO shoedetail (shoe_id,color_id,size_id,quantity) VALUES (?,?,?,?);";
     private static final String SELECT_SHOEDETAIL_BY_ID = "select * from shoedetail where id =?";
+    private static final String SELECT_SHOEDETAIL_BY_SHOEID_COLOR_SIZE = "select * from shoedetail where shoe_id =? and color_id = ? and size_id = ?";
     private static final String SELECT_ALL_SHOEDETAIL= "select * from shoedetail";
     private static final String DELETE_SHOEDETAIL_SQL = "delete from shoedetail where id = ?;";
     private static final String UPDATE_SHOEDETAIL_SQL = "update shoedetail set shoe_id = ?,color_id = ?,size_id = ?,quantity = ? where id = ?;";
@@ -90,5 +91,23 @@ public class ShoeDetailDAO {
             rowUpdated = statement.executeUpdate() > 0;
         }
         return rowUpdated;
+    }
+
+    public ShoeDetail selectShoeDetail(int shoe_id, int color_id, int size_id) {
+        ShoeDetail shoeDetail = null;
+        try (PreparedStatement preparedStatement = connection.prepareStatement(SELECT_SHOEDETAIL_BY_SHOEID_COLOR_SIZE);) {
+            preparedStatement.setInt(1, shoe_id);
+            preparedStatement.setInt(2, color_id);
+            preparedStatement.setInt(3, size_id);
+            ResultSet rs = preparedStatement.executeQuery();
+            while (rs.next()) {
+                int id = rs.getInt("id");
+                int quantity = rs.getInt("quantity");
+                shoeDetail = new ShoeDetail(id, shoe_id, color_id, size_id, quantity);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return shoeDetail;
     }
 }

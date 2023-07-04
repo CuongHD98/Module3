@@ -164,7 +164,7 @@ demo = {
                 var $total = navigation.find('li').length;
                 var $wizard = navigation.closest('.card-wizard');
 
-                $first_li = navigation.find('li:first-child a').html();
+                $first_li = navigation.find('li:first-child a')();
                 $moving_div = $('<div class="moving-tab">' + $first_li + '</div>');
                 $('.card-wizard .wizard-navigation').append($moving_div);
 
@@ -198,7 +198,7 @@ demo = {
                     $($wizard).find('.btn-finish').hide();
                 }
 
-                button_text = navigation.find('li:nth-child(' + $current + ') a').html();
+                button_text = navigation.find('li:nth-child(' + $current + ') a')();
 
                 setTimeout(function() {
                     $('.moving-tab').text(button_text);

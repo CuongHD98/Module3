@@ -122,8 +122,7 @@ public class OrderDetailServlet extends HttpServlet {
 
         List<OrderDetail> listOrderDetail = orderDetailDAO.selectAllOrderDetail();
         request.setAttribute("listOrderDetail", listOrderDetail);
-        RequestDispatcher dispatcher = request.getRequestDispatcher("/admin/orderdetail.jsp");
-        dispatcher.forward(request, response);
+        response.sendRedirect("/admin/orderdetail");
     }
 }
 

@@ -31,7 +31,7 @@ $('#dangnhap').click(function (e) {
         return false;
     }
     if (password === '') {
-        $('#password').html(`<div class="error" style="position: absolute; bottom: 0;background: #fff; padding:10px; border:1px solid #ccc; color: red">Please fill out this field </div>`)
+        $('#password')(`<div class="error" style="position: absolute; bottom: 0;background: #fff; padding:10px; border:1px solid #ccc; color: red">Please fill out this field </div>`)
         alert('Hay nhap password');
 
     }

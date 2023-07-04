@@ -7,6 +7,7 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -289,8 +290,8 @@
                                 </p>
                             </a>
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownProfile">
-                                <a class="dropdown-item" target="_blank" href="Identity/Account/Login.html">Login</a>
-                                <a class="dropdown-item" target="_blank" href="Identity/Account/Register.html">Register</a>
+                                <a class="dropdown-item" target="_blank" href="Identity/Account/Login">Login</a>
+                                <a class="dropdown-item" target="_blank" href="Identity/Account/Register">Register</a>
 
                             </div>
                         </li>
@@ -322,7 +323,7 @@
                 function showError(txt) {
                     $("#showError").show();
                     var errorTxt = '<strong>Warning! </strong>' + txt;
-                    $("#ErrorTxt").fadeIn(400).html(errorTxt);
+                    $("#ErrorTxt").fadeIn(400)(errorTxt);
                 };
 
                 function hideError() {
@@ -600,7 +601,7 @@
                                                 <td><c:out value="${order.id}"/></td>
                                                 <td><c:out value="${order.user_id}"/></td>
                                                 <td><c:out value="${order.date}"/></td>
-                                                <td><c:out value="${order.total_amount}"/></td>
+                                                <td><fmt:formatNumber value="${order.total_amount}"/>₫</td>
                                                 <td><c:out value="${order.status_id}"/></td>
                                                 <td class="disabled-sorting text-right">
                                                     <a href="/admin/order?action=edit&id=${order.id}" class="btn btn-info" role="button">Edit</a>
@@ -670,7 +671,7 @@
                     <script>
                         document.write(new Date().getFullYear())
                     </script>, made with <i class="material-icons">favorite</i> by
-                    <a href="index.html" target="_blank">CuongHD Design</a> for a better web.
+                    <a href="index" target="_blank">CuongHD Design</a> for a better web.
                 </div>
             </div>
         </footer>
@@ -821,7 +822,7 @@
 
             window_width = $(window).width();
 
-            fixed_plugin_open = $('.sidebar .sidebar-wrapper .nav li.active a p').html();
+            fixed_plugin_open = $('.sidebar .sidebar-wrapper .nav li.active a p')();
 
             if (window_width > 767 && fixed_plugin_open == 'Dashboard') {
                 if ($('.fixed-plugin .dropdown').hasClass('show-dropdown')) {

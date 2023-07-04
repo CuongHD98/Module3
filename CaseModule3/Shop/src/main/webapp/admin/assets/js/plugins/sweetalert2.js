@@ -1131,7 +1131,7 @@ var _Symbol = typeof Symbol === 'function' ? Symbol : function () {
 
 // WeakMap polyfill, needed for Android 4.4
 // Related issue: https://github.com/sweetalert2/sweetalert2/issues/1071
-// http://webreflection.blogspot.fi/2015/04/a-weakmap-polyfill-in-20-lines-of-code.html
+// http://webreflection.blogspot.fi/2015/04/a-weakmap-polyfill-in-20-lines-of-code
 
 var WeakMap$1 = typeof WeakMap === 'function' ? WeakMap : function (s, dP, hOP) {
   function WeakMap() {
@@ -1415,8 +1415,8 @@ function setParameters(params) {
   }
 
   // Content as HTML
-  if (params.html) {
-    parseHtmlToContainer(params.html, content);
+  if (params) {
+    parseHtmlToContainer(params, content);
 
     // Content as plain text
   } else if (params.text) {

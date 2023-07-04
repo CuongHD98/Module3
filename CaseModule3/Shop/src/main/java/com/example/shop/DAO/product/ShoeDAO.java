@@ -14,6 +14,7 @@ import java.util.List;
 public class ShoeDAO {
     private static final String INSERT_SHOE_SQL = "INSERT INTO shoes (image_id,name,description,time,price) VALUES (?,?,?,?,?);";
     private static final String SELECT_SHOE_BY_ID = "select * from shoes where id =?";
+    private static final String SELECT_SHOE_BY_NAME = "select * from shoes where name =?";
     private static final String SELECT_ALL_SHOE= "select * from shoes";
     private static final String DELETE_SHOE_SQL = "delete from shoes where id = ?;";
     private static final String UPDATE_SHOE_SQL = "update shoes set image_id = ?,name = ?,description = ?,time = ?, price = ? where id = ?;";
@@ -93,5 +94,24 @@ public class ShoeDAO {
             rowUpdated = statement.executeUpdate() > 0;
         }
         return rowUpdated;
+    }
+
+    public Shoe selectShoe(String name) {
+        Shoe shoe = null;
+        try (PreparedStatement preparedStatement = connection.prepareStatement(SELECT_SHOE_BY_NAME);) {
+            preparedStatement.setString(1, name);
+            ResultSet rs = preparedStatement.executeQuery();
+            while (rs.next()) {
+                int id = rs.getInt("id");
+                int image_id = rs.getInt("image_id");
+                String description = rs.getString("description");
+                String time = rs.getString("time");
+                float price = rs.getFloat("price");
+                shoe = new Shoe(id, image_id, name, description, time, price);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return shoe;
     }
 }

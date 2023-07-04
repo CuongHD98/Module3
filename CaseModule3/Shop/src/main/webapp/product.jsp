@@ -40,7 +40,7 @@
 
 <body>
 <div class="header">
-    <a style="color: #ffffff;text-decoration: none;" href="index.html">MIỄN PHÍ VẬN CHUYỂN VỚI ĐƠN HÀNG NỘI THÀNH > 300K
+    <a style="color: #ffffff;text-decoration: none;" href="index">MIỄN PHÍ VẬN CHUYỂN VỚI ĐƠN HÀNG NỘI THÀNH > 300K
         - ĐỔI TRẢ TRONG 30 NGÀY - ĐẢM BẢO CHẤT LƯỢNG</a>
 </div>
 
@@ -48,25 +48,25 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
 
     <div class="container">
-        <a class="navbar-brand" href="index.html">
+        <a class="navbar-brand" href="index">
             <img src="/images/logo.png" class="logo-top" alt="">
         </a>
         <div class="desk-menu collapse navbar-collapse justify-content-md-center" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item active">
-                    <a class="nav-link" href="index.html">TRANG CHỦ</a>
+                    <a class="nav-link" href="/index">TRANG CHỦ</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="product.html">BỘ SƯU TẬP</a>
+                    <a class="nav-link" href="/product">BỘ SƯU TẬP</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="introduce.html">GIỚI THIỆU</a>
+                    <a class="nav-link" href="/introduce">GIỚI THIỆU</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="blog.html">BLOG</a>
+                    <a class="nav-link" href="/blog">BLOG</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="contact.html">LIÊN HỆ</a>
+                    <a class="nav-link" href="/contact">LIÊN HỆ</a>
                 </li>
             </ul>
         </div>
@@ -83,19 +83,19 @@
                 <div class="justify-content-md-center">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link" href="index.html">TRANG CHỦ</a>
+                            <a class="nav-link" href="/index">TRANG CHỦ</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="Product.html">BỘ SƯU TẬP</a>
+                            <a class="nav-link" href="/product">BỘ SƯU TẬP</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="introduce.html">GIỚI THIỆU</a>
+                            <a class="nav-link" href="/introduce">GIỚI THIỆU</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="blog.html">BLOG</a>
+                            <a class="nav-link" href="/blog">BLOG</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="Contact.html">LIÊN HỆ</a>
+                            <a class="nav-link" href="/contact">LIÊN HỆ</a>
                         </li>
                     </ul>
                 </div>
@@ -181,7 +181,7 @@
                             </tr>
                             <tr>
 
-                                <td><a href="viewcart.html" class="linktocheckout btn btn-success" style="color: white">Thanh toán</a></td>
+                                <td><a href="viewcart" class="linktocheckout btn btn-success" style="color: white">Thanh toán</a></td>
                             </tr>
                             </tbody>
                         </table>
@@ -215,12 +215,12 @@
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 pd5">
                 <ol class="breadcrumb breadcrumb-arrows">
                     <li>
-                        <a href="index.html">
+                        <a href="/index">
                             <span>Trang chủ</span>
                         </a>
                     </li>
                     <li>
-                        <a href="Product.html">
+                        <a href="/product">
                             <span>Danh mục</span>
                         </a>
                     </li>
@@ -253,14 +253,14 @@
                                 <div class="block_content layered-category collapse" id="collapseExample1">
                                     <div class="layered-content card card-body" style="border:0;padding:0">
                                         <ul class="menuList-links">
-                                            <li class=""><a href="home.html"
+                                            <li class=""><a href="/index"
                                                             title="Trang chủ"><span>Trang chủ</span></a></li>
-                                            <li class=" active "><a href="product.html" title="Bộ sưu tập"><span>Bộ sưu tập</span></a>
+                                            <li class=" active "><a href="/product" title="Bộ sưu tập"><span>Bộ sưu tập</span></a>
                                             </li>
-                                            <li class=""><a href="introduce.html"
+                                            <li class=""><a href="/introduce"
                                                             title="Giới thiệu"><span>Giới thiệu</span></a></li>
-                                            <li class=""><a href="blog.html" title="Blog"><span>Blog</span></a></li>
-                                            <li class=""><a href="contact.html" title="Liên hệ"><span>Liên hệ</span></a>
+                                            <li class=""><a href="/blog" title="Blog"><span>Blog</span></a></li>
+                                            <li class=""><a href="/ contact" title="Liên hệ"><span>Liên hệ</span></a>
                                             </li>
                                         </ul>
                                     </div>
@@ -289,19 +289,19 @@
                                         <div class="layered-content bl-filter filter-price">
                                             <ul class="check-box-list">
                                                 <li>
-                                                    <input type="radio" id="p1" name="price" value="1">
+                                                    <input type="radio" id="p1" name="price" value="500000">
                                                     <label for="p1">
                                                         <span>Dưới</span> 500,000₫
                                                     </label>
                                                 </li>
                                                 <li>
-                                                    <input type="radio" id="p2" name="price" value="2">
+                                                    <input type="radio" id="p2" name="price" value="1000000">
                                                     <label for="p2">
                                                         500,000₫ - 1,000,000₫
                                                     </label>
                                                 </li>
                                                 <li>
-                                                    <input type="radio" id="p3" name="price" value="3">
+                                                    <input type="radio" id="p3" name="price" value="">
                                                     <label for="p3">
                                                         1,000,000₫ - 1,500,000₫
                                                     </label>
@@ -476,7 +476,7 @@
                     <div class="col-md-3 col-sm-6 col-xs-6 col-6">
                     <div class="product-block">
                         <div class="product-img fade-box">
-                            <a href=/productdetail" class="img-resize">
+                            <a href="/productdetail?id=${viewShoe.id}" class="img-resize" role="button">
                                 <img src="${viewShoe.url}" class="lazyloaded">
                                 <img src="${viewShoe.url}" class="lazyloaded">
                             </a>
@@ -484,7 +484,7 @@
                         </div>
                         <div class="product-detail clearfix">
                             <div class="pro-text">
-                                <a style=" color: black;font-size: 14px;text-decoration: none;" href="/productdetail" inspiration pack>
+                                <a style=" color: black;font-size: 14px;text-decoration: none;" href="/productdetail?id=${viewShoe.id}" role="button" inspiration pack >
                                     <c:out value="${viewShoe.name}"/>
                                 </a>
                             </div>

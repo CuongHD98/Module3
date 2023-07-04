@@ -13,6 +13,7 @@ import java.util.List;
 public class OrderDetailDAO {
     private static final String INSERT_ORDERDETAIL_SQL = "INSERT INTO orderdetail (order_id,shoedetail_id,quantity_buy) VALUES (?,?,?);";
     private static final String SELECT_ORDERDETAIL_BY_ID = "select * from orderdetail where id =?";
+    private static final String SELECT_ORDERDETAIL_BY_ORDER_ID = "select * from orderdetail where order_id =?";
     private static final String SELECT_ALL_ORDERDETAIL = "select * from orderdetail";
     private static final String DELETE_ORDERDETAIL_SQL = "delete from orderdetail where id = ?;";
     private static final String UPDATE_ORDERDETAIL_SQL = "update orderdetail set order_id = ?,shoedetail_id = ?,quantity_buy = ? where id = ?;";
@@ -86,5 +87,22 @@ public class OrderDetailDAO {
             rowUpdated = statement.executeUpdate() > 0;
         }
         return rowUpdated;
+    }
+
+    public List<OrderDetail> selectOrderDetailByOrderId(int order_id) {
+        List<OrderDetail> orderDetails = new ArrayList<>();
+        try (PreparedStatement preparedStatement = connection.prepareStatement(SELECT_ORDERDETAIL_BY_ORDER_ID);) {
+            preparedStatement.setInt(1, order_id);
+            ResultSet rs = preparedStatement.executeQuery();
+            while (rs.next()) {
+                int id = rs.getInt("id");
+                int shoedetail_id = rs.getInt("shoedetail_id");
+                int quantity_buy = rs.getInt("quantity_buy");
+                orderDetails.add(new OrderDetail(id, order_id, shoedetail_id, quantity_buy));
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return orderDetails;
     }
 }

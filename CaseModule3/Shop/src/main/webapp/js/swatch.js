@@ -176,13 +176,13 @@ var swatch_size = parseInt($('#add-item-form .select-swatch').children().size())
       });
       $(document).ready(function(){
         var vl = $('#add-item-form .swatch .color input').val();
-        $('#add-item-form .swatch .color input').parents(".swatch").find(".header span").html(vl);
+        $('#add-item-form .swatch .color input').parents(".swatch").find(".header span")(vl);
         $("#add-item-form .select-swap .color" ).hover(function() { 
           var value = $( this ).data("value");
-          $(this).parents(".swatch").find(".header span").html( value );
+          $(this).parents(".swatch").find(".header span")( value );
         },function(){
-          var value = $("#add-item-form .select-swap .color label.sd span").html();
-          $(this).parents(".swatch").find(".header span").html( value );
+          var value = $("#add-item-form .select-swap .color label.sd span")();
+          $(this).parents(".swatch").find(".header span")( value );
         });
       });
       $(document).ready(function(){
@@ -194,7 +194,7 @@ var swatch_size = parseInt($('#add-item-form .select-swatch').children().size())
       
         $(document).on("click","#detail_more",function(){
           $(this).toggleClass("open").parent().toggleClass("open");
-          ($(this).hasClass('open'))?$(this).find("span").html("Rút gọn"):$(this).find("span").html("Xem thêm");
+          ($(this).hasClass('open'))?$(this).find("span")("Rút gọn"):$(this).find("span")("Xem thêm");
         });
       });
       

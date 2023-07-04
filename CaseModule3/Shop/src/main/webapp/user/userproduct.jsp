@@ -7,7 +7,7 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -34,7 +34,7 @@
 
 <body>
 <div class="header">
-  <a style="color: #ffffff;text-decoration: none;" href="indexSignin.html">MIỄN PHÍ VẬN CHUYỂN VỚI ĐƠN HÀNG NỘI THÀNH > 300K
+  <a style="color: #ffffff;text-decoration: none;" href="/user">MIỄN PHÍ VẬN CHUYỂN VỚI ĐƠN HÀNG NỘI THÀNH > 300K
     - ĐỔI TRẢ TRONG 30 NGÀY - ĐẢM BẢO CHẤT LƯỢNG</a>
 </div>
 
@@ -42,25 +42,25 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
 
   <div class="container">
-    <a class="navbar-brand" href="indexSignin.html">
+    <a class="navbar-brand" href="/user">
       <img src="/images/logo.png" class="logo-top" alt="">
     </a>
     <div class="desk-menu collapse navbar-collapse justify-content-md-center" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item active">
-          <a class="nav-link" href="indexSignin.html">TRANG CHỦ</a>
+          <a class="nav-link" href="/user">TRANG CHỦ</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="productSignin.html">BỘ SƯU TẬP</a>
+          <a class="nav-link" href="/user/product">BỘ SƯU TẬP</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="introduceSignin.html">GIỚI THIỆU</a>
+          <a class="nav-link" href="/user/introduce">GIỚI THIỆU</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="blogSignin.html">BLOG</a>
+          <a class="nav-link" href="/user/blog">BLOG</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="contactSignin.html">LIÊN HỆ</a>
+          <a class="nav-link" href="/user/contact">LIÊN HỆ</a>
         </li>
       </ul>
     </div>
@@ -77,19 +77,19 @@
         <div class="justify-content-md-center">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link" href="indexSignin.html">TRANG CHỦ</a>
+              <a class="nav-link" href="/user">TRANG CHỦ</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="productSignin.html">BỘ SƯU TẬP</a>
+              <a class="nav-link" href="/user/product">BỘ SƯU TẬP</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="introduceSignin.html">GIỚI THIỆU</a>
+              <a class="nav-link" href="/user/introduce">GIỚI THIỆU</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="blogSignin.html">BLOG</a>
+              <a class="nav-link" href="/user/blog">BLOG</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href=contactSignin.html>LIÊN HỆ</a>
+              <a class="nav-link" href=/user/contact>LIÊN HỆ</a>
             </li>
           </ul>
         </div>
@@ -141,29 +141,24 @@
           <div class="cart-view clearfix">
             <table id="cart-view">
               <tbody>
-              <tr class="item_1">
-                <td class="img"><a href="" title="Nike Air Max 90 Essential &quot;Grape&quot;"><img
-                        src="/images/shoes/1.jpg" alt="/products/nike-air-max-90-essential-grape"></a>
-                </td>
-                <td>
-                  <a class="pro-title-view" style="color: #272727" href=""
-                     title="Nike Air Max 90 Essential &quot;Grape&quot;">Nike Air Max 90 Essential
-                    "Grape"</a>
-                  <span class="variant">Tím / 36</span>
-                  <span class="pro-quantity-view">
-                                        <div class="quantity-picker">
-                                            <div class="quantity-controls">
-                                            <button type="button" class="quantity-decrease">-</button>
-                                            <input type="text" id="quantity-input" min="1" value="1">
-                                            <button type="button" class="quantity-increase">+</button>
-                                            </div>
-                                         </div>
-                                    </span>
-                  <span class="pro-price-view">4,800,000₫</span>
-                  <span class="remove_link remove-cart"><a href=""><i style="color: #272727;"
-                                                                      class="fas fa-times"></i></a></span>
-                </td>
-              </tr>
+              <c:set var="total" value="0" />
+              <c:forEach var="viewShoeDetail" items="${viewShoeDetailList}">
+                <tr class="item_1">
+                  <td class="img"><a><img src="${viewShoeDetail.url}"></a></td>
+                  <td>
+                    <a class="pro-title-view" style="color: #272727">${viewShoeDetail.name}</a>
+                    <span class="variant">${viewShoeDetail.code} / ${viewShoeDetail.size}</span>
+                    <span class="variant">SL : ${viewShoeDetail.quantity_buy}</span>
+                    <c:set var="price" value="${viewShoeDetail.price}"/>
+                    <c:set var="quantity" value="${viewShoeDetail.quantity_buy}"/>
+                      <span class="pro-price-view"><fmt:formatNumber value="${price * quantity}" />₫</span>
+                    <c:set var="subtotal" value="${price * quantity}" />
+                    <c:set var="total" value="${total + subtotal}" />
+                    <span class="remove_link remove-cart"><a ><i style="color: #272727;"
+                                                                        class="fas fa-times"></i></a></span>
+                  </td>
+                </tr>
+              </c:forEach>
               </tbody>
             </table>
             <span class="line"></span>
@@ -171,11 +166,11 @@
               <tbody>
               <tr>
                 <td class="text-left">TỔNG TIỀN:</td>
-                <td class="text-right" id="total-view-cart">4,800,000₫</td>
+                <td class="text-right" id="total-view-cart"><fmt:formatNumber value="${total}" />₫</td>
               </tr>
               <tr>
 
-                <td><a href="viewcartSignin.html" class="linktocheckout btn btn-success" style="color: white">Thanh toán</a></td>
+                <td><a href="/user/order" class="linktocheckout btn btn-success" style="color: white">Thanh toán</a></td>
               </tr>
               </tbody>
             </table>
@@ -201,31 +196,31 @@
             <table class="table table-hover">
               <tr>
                 <th>Họ tên</th>
-                <td>Lê Văn A</td>
+                <td>${account.name}</td>
               </tr>
               <tr>
                 <th>Giới tính</th>
-                <td>Nam</td>
+                <td>${account.gender}</td>
               </tr>
               <tr>
                 <th>Năm Sinh</th>
-                <td>1999</td>
+                <td>${account.birthday}</td>
               </tr>
               <tr>
                 <th>Số Điện Thoại</th>
-                <td>098765</td>
+                <td>${account.phone}</td>
               </tr>
               <tr>
                 <th>Địa Chỉ</th>
-                <td>HN</td>
+                <td>${account.address}</td>
               </tr>
               <tr>
                 <th>Email</th>
-                <td>Nam@gmail</td>
+                <td>${account.email}</td>
               </tr>
               <tr>
                 <th>Mật Khẩu</th>
-                <td><N></N>am</td>
+                <td>${account.password}</td>
               </tr>
             </table>
           </div>
@@ -245,7 +240,7 @@
         <i class="fas fa-shopping-cart"></i>
       </a>
 
-      <a href="../signin.html">
+      <a href="/index">
         <span class="glyphicon glyphicon-log-out"></span>
       </a>
 
@@ -272,12 +267,12 @@
       <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 pd5">
         <ol class="breadcrumb breadcrumb-arrows">
           <li>
-            <a href="indexSignin.html">
+            <a href="indexSignin">
               <span>Trang chủ</span>
             </a>
           </li>
           <li>
-            <a href="productSignin.html">
+            <a href="productSignin">
               <span>Danh mục</span>
             </a>
           </li>
@@ -310,14 +305,14 @@
                 <div class="block_content layered-category collapse" id="collapseExample1">
                   <div class="layered-content card card-body" style="border:0;padding:0">
                     <ul class="menuList-links">
-                      <li class=""><a href="indexSignin.html"
+                      <li class=""><a href="indexSignin"
                                       title="Trang chủ"><span>Trang chủ</span></a></li>
-                      <li class=" active "><a href="productSignin.html" title="Bộ sưu tập"><span>Bộ sưu tập</span></a>
+                      <li class=" active "><a href="productSignin" title="Bộ sưu tập"><span>Bộ sưu tập</span></a>
                       </li>
-                      <li class=""><a href="introduceSignin.html"
+                      <li class=""><a href="introduceSignin"
                                       title="Giới thiệu"><span>Giới thiệu</span></a></li>
-                      <li class=""><a href="blogSignin.html" title="Blog"><span>Blog</span></a></li>
-                      <li class=""><a href="contactSignin.html" title="Liên hệ"><span>Liên hệ</span></a>
+                      <li class=""><a href="blogSignin" title="Blog"><span>Blog</span></a></li>
+                      <li class=""><a href="contactSignin" title="Liên hệ"><span>Liên hệ</span></a>
                       </li>
                     </ul>
                   </div>
@@ -539,33 +534,29 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-md-3 col-sm-6 col-xs-6 col-6">
-          <div class="product-block">
-            <div class="product-img fade-box">
-              <a href="detaiproductSignin.html" title="Adidas EQT Cushion ADV" class="img-resize">
-                <img
-                        src="/images/shoes/1.jpg"
-                        alt="Adidas EQT Cushion ADV" class="lazyloaded">
-                <img
-                        src="/images/shoes/1-1.jpg"
-                        alt="Adidas EQT Cushion ADV" class="lazyloaded">
-              </a>
-
-            </div>
-            <div class="product-detail clearfix">
-              <div class="pro-text">
-                <a style=" color: black;
-                                                          font-size: 14px;text-decoration: none;" href="detaiproductSignin.html"
-                   title="Adidas EQT Cushion ADV" inspiration pack>
-                  Adidas EQT Cushion ADV "North America"
+        <c:forEach var="viewShoe" items="${viewShoeList}">
+          <div class="col-md-3 col-sm-6 col-xs-6 col-6">
+            <div class="product-block">
+              <div class="product-img fade-box">
+                <a href="/user/productdetail?id=${viewShoe.id}" class="img-resize" role="button">
+                  <img src="${viewShoe.url}" class="lazyloaded">
+                  <img src="${viewShoe.url}" class="lazyloaded">
                 </a>
+
               </div>
-              <div class="pro-price">
-                <p class="">7,000,000₫</p>
+              <div class="product-detail clearfix">
+                <div class="pro-text">
+                  <a style=" color: black;font-size: 14px;text-decoration: none;" href="/user/productdetail?id=${viewShoe.id}" role="button" inspiration pack >
+                    <c:out value="${viewShoe.name}"/>
+                  </a>
+                </div>
+                <div class="pro-price">
+                  <p class=""><c:out value="${viewShoe.price}"/>₫</p>
+                </div>
               </div>
             </div>
           </div>
-        </div>
+        </c:forEach>
       </div>
       <!--gallery-->
       <section class="section section-gallery">

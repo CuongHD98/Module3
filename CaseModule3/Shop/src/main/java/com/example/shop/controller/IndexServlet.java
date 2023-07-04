@@ -1,8 +1,8 @@
 package com.example.shop.controller;
 
-import com.example.shop.DAO.account.AccountDAO;
 import com.example.shop.DAO.product.ImageDAO;
 import com.example.shop.DAO.product.ShoeDAO;
+
 import com.example.shop.model.Account;
 import com.example.shop.model.Image;
 import com.example.shop.model.Shoe;
@@ -13,6 +13,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -35,6 +36,9 @@ public class IndexServlet extends HttpServlet {
         for (Shoe shoe : shoeList) {
             imageList.add(imageDAO.selectImage(shoe.getImage_id()));
         }
+        Account account = null;
+        HttpSession session = request.getSession();
+        session.setAttribute("account", account);
         request.setAttribute("imageList", imageList);
         RequestDispatcher dispatcher = request.getRequestDispatcher("index.jsp");
         dispatcher.forward(request, response);

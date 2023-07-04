@@ -15,6 +15,7 @@ import java.util.List;
 public class ColorDAO {
     private static final String INSERT_COLOR_SQL = "INSERT INTO colors (code) VALUES (?);";
     private static final String SELECT_COLOR_BY_ID = "select * from colors where id =?";
+    private static final String SELECT_COLOR_BY_CODE = "select * from colors where code =?";
     private static final String SELECT_ALL_COLOR = "select * from colors";
     private static final String DELETE_COLOR_SQL = "delete from colors where id = ?;";
     private static final String UPDATE_COLOR_SQL = "update colors set code = ? where id = ?;";
@@ -79,5 +80,19 @@ public class ColorDAO {
             rowUpdated = statement.executeUpdate() > 0;
         }
         return rowUpdated;
+    }
+    public Color selectColor(String code) {
+        Color color = null;
+        try (PreparedStatement preparedStatement = connection.prepareStatement(SELECT_COLOR_BY_CODE);) {
+            preparedStatement.setString(1, code);
+            ResultSet rs = preparedStatement.executeQuery();
+            while (rs.next()) {
+                int id = rs.getInt("id");
+                color = new Color(id, code);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return color;
     }
 }

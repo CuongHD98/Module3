@@ -6,7 +6,7 @@
  * Supports Bootstrap 2.2.x, 2.3.x, 3.0
  * Dual licensed under the MIT and GPL licenses:
  * http://www.opensource.org/licenses/mit-license.php
- * http://www.gnu.org/licenses/gpl.html
+ * http://www.gnu.org/licenses/gpl
  * Authors: Vadim Vincent Gabriel (http://vadimg.com), Jason Gill (www.gilluminate.com)
  */
 ;

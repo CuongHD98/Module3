@@ -25,7 +25,7 @@
 
 <body>
 <div class="header">
-    <a style="color: #ffffff;text-decoration: none;" href="index.html">MIỄN PHÍ VẬN CHUYỂN VỚI ĐƠN HÀNG NỘI THÀNH > 300K
+    <a style="color: #ffffff;text-decoration: none;" href="index">MIỄN PHÍ VẬN CHUYỂN VỚI ĐƠN HÀNG NỘI THÀNH > 300K
         - ĐỔI TRẢ TRONG 30 NGÀY - ĐẢM BẢO CHẤT LƯỢNG</a>
 </div>
 
@@ -34,25 +34,25 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
 
     <div class="container">
-        <a class="navbar-brand" href="index.html">
+        <a class="navbar-brand" href="/index">
             <img src="/images/logo.png" class="logo-top" alt="">
         </a>
         <div class="desk-menu collapse navbar-collapse justify-content-md-center" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item active">
-                    <a class="nav-link" href="index.html">TRANG CHỦ</a>
+                    <a class="nav-link" href="/index">TRANG CHỦ</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="product.html">BỘ SƯU TẬP</a>
+                    <a class="nav-link" href="/product">BỘ SƯU TẬP</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="introduce.html">GIỚI THIỆU</a>
+                    <a class="nav-link" href="/introduce">GIỚI THIỆU</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="blog.html">BLOG</a>
+                    <a class="nav-link" href="/blog.jsp">BLOG</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="contact.html">LIÊN HỆ</a>
+                    <a class="nav-link" href="/contact">LIÊN HỆ</a>
                 </li>
             </ul>
         </div>
@@ -69,19 +69,19 @@
                 <div class="justify-content-md-center">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link" href="index.html">TRANG CHỦ</a>
+                            <a class="nav-link" href="/index">TRANG CHỦ</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="Product.html">BỘ SƯU TẬP</a>
+                            <a class="nav-link" href="/product">BỘ SƯU TẬP</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="introduce.html">GIỚI THIỆU</a>
+                            <a class="nav-link" href="/introduce">GIỚI THIỆU</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="blog.html">BLOG</a>
+                            <a class="nav-link" href="/blog.jsp">BLOG</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="Contact.html">LIÊN HỆ</a>
+                            <a class="nav-link" href="/contact">LIÊN HỆ</a>
                         </li>
                     </ul>
                 </div>
@@ -164,7 +164,7 @@
                                 <td class="text-right" id="total-view-cart">4,800,000₫</td>
                             </tr>
                             <tr>
-                                <td><a href="viewcart.html" class="linktocheckout btn btn-success" style="color: white">Thanh toán</a></td>
+                                <td><a href="viewcart" class="linktocheckout btn btn-success" style="color: white">Thanh toán</a></td>
                             </tr>
                             </tbody>
                         </table>
@@ -211,7 +211,7 @@
             <div class="col-md-3 col-sm-6 col-xs-6 col-6">
                 <div class="product-block">
                     <div class="product-img fade-box">
-                        <a href="#" title="Adidas EQT Cushion ADV" class="img-resize">
+                        <a href="/product" title="Adidas EQT Cushion ADV" class="img-resize">
                             <img src="/images/shoes/801740_1_e4adfa6d09b7468a8c9fb21bf8e02bd4_medium (1).jpg"
                                  alt="Adidas EQT Cushion ADV" class="lazyloaded">
                             <img src="/images/shoes/shoes fade 1.jpg" alt="Adidas EQT Cushion ADV" class="lazyloaded">
@@ -235,7 +235,7 @@
             <div class="col-md-3 col-sm-6 col-xs-6 col-6">
                 <div class="product-block">
                     <div class="product-img fade-box">
-                        <a href="#" title="Adidas Nmd R1" class="img-resize">
+                        <a href="/product" title="Adidas Nmd R1" class="img-resize">
                             <img src="/images/shoes/201493_1_017364c87c3e4802a8cda5259e3d5a95_grande.jpg" alt="Adidas Nmd R1"
                                  class="lazyloaded">
                             <img src="/images/shoes/shoes fade 2.jpg" alt="Adidas Nmd R1" class="lazyloaded">
@@ -258,7 +258,7 @@
             <div class="col-md-3 col-sm-6 col-xs-6 col-6">
                 <div class="product-block">
                     <div class="product-img fade-box">
-                        <a href="#" title="Adidas PW Solar HU NMD" class="img-resize">
+                        <a href="/product" title="Adidas PW Solar HU NMD" class="img-resize">
                             <img src="/images/shoes/805266_02_b8b2cdd1782246febf8879a44a7e5021_grande.jpg"
                                  alt="Adidas PW Solar HU NMD" class="lazyloaded">
                             <img src="/images/shoes/shoes fade 3.jpg" alt="Adidas PW Solar HU NMD" class="lazyloaded">
@@ -268,7 +268,7 @@
                     <div class="product-detail clearfix">
                         <div class="pro-text">
                             <a style=" color: black;
-                            font-size: 14px;text-decoration: none;" href="#" title="Adidas PW Solar HU NMD" inspiration
+                            font-size: 14px;text-decoration: none;" href="/product" title="Adidas PW Solar HU NMD" inspiration
                                pack>
                                 Adidas PW Solar HU NMD "Inspiration Pack"
                             </a>
@@ -282,7 +282,7 @@
             <div class="col-md-3 col-sm-6 col-xs-6 col-6">
                 <div class="product-block">
                     <div class="product-img fade-box">
-                        <a href="#" title="Adidas Ultraboost W" class="img-resize">
+                        <a href="/product" title="Adidas Ultraboost W" class="img-resize">
                             <img src="/images/shoes/801432_01_b16d089f8bda434bacfe4620e8480be1_grande.jpg" alt="Adidas Ultraboost W"
                                  class="lazyloaded">
                             <img src="/images/shoes/shoes fade 4.jpg" alt="Adidas Ultraboost W" class="lazyloaded">
@@ -292,7 +292,7 @@
                     <div class="product-detail clearfix">
                         <div class="pro-text">
                             <a style=" color: black;
-                       font-size: 14px;text-decoration: none;" href="#" title="Adidas Ultraboost W" inspiration pack>
+                       font-size: 14px;text-decoration: none;" href="/product" title="Adidas Ultraboost W" inspiration pack>
                                 Adidas Ultraboost W
                             </a>
                         </div>
@@ -308,7 +308,7 @@
                 <div class="product-block">
 
                     <div class="product-img fade-box">
-                        <a href="#" title="Adidas Yeezy boost 350 v2" class="img-resize">
+                        <a href="/product" title="Adidas Yeezy boost 350 v2" class="img-resize">
                             <img class="lazyloaded" src="/images/shoes/800502_01_e92c3b2bb8764b52a791846d84a3a360_grande.jpg"
                                  alt="Adidas Yeezy boost 350 v2">
                             <img class="lazyloaded" src="/images/shoes/shoes fade 5.jpg" alt="Adidas Yeezy boost 350 v2">
@@ -319,7 +319,7 @@
                     <div class="product-detail clearfix">
                         <div class="pro-text">
                             <a style=" color: black;
-                      font-size: 14px;text-decoration: none;" href="#" title="Adidas Yeezy boost 350 v2" inspiration
+                      font-size: 14px;text-decoration: none;" href="/product" title="Adidas Yeezy boost 350 v2" inspiration
                                pack>
 
                                 Adidas Yeezy boost 350 v2 "zebra"
@@ -335,7 +335,7 @@
             <div class="col-md-3 col-sm-6 col-xs-6 col-6">
                 <div class="product-block">
                     <div class="product-img fade-box">
-                        <a href="#" title="Adidas Yeezy Boost 700" class="img-resize">
+                        <a href="/product" title="Adidas Yeezy Boost 700" class="img-resize">
                             <img class="lazyloaded" src="/images/shoes/802501_01_eccb69b5bcdf4ef5b209557ec6547774_grande.jpg"
                                  alt="Adidas Yeezy Boost 700">
                             <img class="lazyloaded" src="/images/shoes/shoes fade 6.jpg" alt="Adidas Yeezy Boost 700">
@@ -345,7 +345,7 @@
                     <div class="product-detail clearfix">
                         <div class="pro-text">
                             <a style=" color: black;
-                      font-size: 14px;text-decoration: none;" href="">
+                      font-size: 14px;text-decoration: none;" href="/product">
                                 Adidas Yeezy Boost 700 "Wave Runner"
                             </a>
                         </div>
@@ -358,7 +358,7 @@
             <div class="col-md-3 col-sm-6 col-xs-6 col-6">
                 <div class="product-block">
                     <div class="product-img fade-box">
-                        <a href="#" title="Adidas Zx 4000 4d" class="img-resize">
+                        <a href="/product" title="Adidas Zx 4000 4d" class="img-resize">
                             <img class="lazyloaded" src="/images/shoes/806859_01_1ad7dd36e7b5403286b95a253e00718d_grande.jpg"
                                  alt="Adidas Zx 4000 4d">
                             <img class="lazyloaded" src="/images/shoes/shoes fade 7.jpg" alt="Adidas Zx 4000 4d">
@@ -368,7 +368,7 @@
                     <div class="product-detail clearfix">
                         <div class="pro-text">
                             <a style=" color: black;
-                      font-size: 14px;text-decoration: none;" href="#" title="Adidas Zx 4000 4d" inspiration pack>
+                      font-size: 14px;text-decoration: none;" href="/product" title="Adidas Zx 4000 4d" inspiration pack>
                                 Adidas Zx 4000 4d
                             </a>
                         </div>
@@ -381,7 +381,7 @@
             <div class="col-md-3 col-sm-6 col-xs-6 col-6">
                 <div class="product-block">
                     <div class="product-img fade-box">
-                        <a href="#" title=" Ultra Boost" class="img-resize">
+                        <a href="/product" title=" Ultra Boost" class="img-resize">
                             <img class="lazyloaded" src="/images/shoes/805338_01_eb7365e97d3f471d872159918a8526a9_grande.jpg"
                                  alt=" Ultra Boost">
                             <img class="lazyloaded" src="/images/shoes/shoes fade 8.jpg" alt=" Ultra Boost">
@@ -391,7 +391,7 @@
                     <div class="product-detail clearfix">
                         <div class="pro-text">
                             <a style=" color: black;
-                       font-size: 14px;text-decoration: none;" href="#" title="Adidas EQT Cushion ADV" inspiration
+                       font-size: 14px;text-decoration: none;" href="/product" title="Adidas EQT Cushion ADV" inspiration
                                pack>
                                 Ultra Boost
                             </a>
@@ -410,7 +410,7 @@
             <div class="row">
                 <div class="col-xs-12 col-sm-4 home-banner-pd">
                     <div class="block-banner-category">
-                        <a href="#" class="link-banner wrap-flex-align flex-column">
+                        <a href="/product" class="link-banner wrap-flex-align flex-column">
                             <div class="fg-image fade-box">
                                 <img class="lazyloaded" src="/images/shoes/block_home_category1_grande.jpg" alt="Shoes">
                             </div>
@@ -425,7 +425,7 @@
                 </div>
                 <div class="col-xs-12 col-sm-4 home-banner-pd">
                     <div class="block-banner-category">
-                        <a href="#" class="link-banner wrap-flex-align flex-column">
+                        <a href="/product" class="link-banner wrap-flex-align flex-column">
                             <div class="fg-image fade-box">
                                 <img class="lazyloaded" src="/images/shoes/block_home_category2_grande.jpg" alt="Shoes">
                             </div>
@@ -440,7 +440,7 @@
                 </div>
                 <div class="col-xs-12 col-sm-4 home-banner-pd">
                     <div class="block-banner-category">
-                        <a href="#" class="link-banner wrap-flex-align flex-column">
+                        <a href="/product" class="link-banner wrap-flex-align flex-column">
                             <div class="fg-image">
                                 <img class="lazyloaded" src="/images/shoes/block_home_category3_grande.jpg" alt="Shoes">
                             </div>
@@ -477,7 +477,7 @@
                     <div class="">
                         <div class="product-block">
                             <div class="product-img fade-box">
-                                <a href="#" title="Adidas Ultraboost W" class="img-resize">
+                                <a href="/product" title="Adidas Ultraboost W" class="img-resize">
                                     <img src="/images/shoes/801432_01_b16d089f8bda434bacfe4620e8480be1_grande.jpg"
                                          alt="Adidas Ultraboost W"
                                          class="lazyloaded">
@@ -489,7 +489,7 @@
                             <div class="product-detail clearfix">
                                 <div class="pro-text">
                                     <a style=" color: black;
-                           font-size: 14px;text-decoration: none;" href="#" title="Adidas Ultraboost W" inspiration
+                           font-size: 14px;text-decoration: none;" href="/product" title="Adidas Ultraboost W" inspiration
                                        pack>
                                         Adidas Ultraboost W
                                     </a>
@@ -509,7 +509,7 @@
             <div class="container">
                 <div class="hot_sp">
                     <h2 style="text-align:center;padding-top: 10px">
-                        <a style="font-size: 28px;color: black;text-decoration: none" href="">Bài viết mới nhất</a>
+                        <a style="font-size: 28px;color: black;text-decoration: none" href="/blog">Bài viết mới nhất</a>
                     </h2>
                     <br/>
                 </div>
@@ -524,7 +524,7 @@
                     <div class="col-md-4">
                         <div class="post_item">
                             <div class="post_featured">
-                                <a href="#" title="Adidas EQT Cushion ADV">
+                                <a href="/blog" title="Adidas EQT Cushion ADV">
                                     <img class="img-resize" style="padding-bottom:15px;" src="/images/shoes/new-1.jpg"
                                          alt="Adidas Falcon nổi bật mùa Hè với phối màu color block">
                                 </a>
@@ -539,7 +539,7 @@
                             <div class="pro-text">
                                 <h3 class="post_title">
                                     <a style=" color: black;
-                                  font-size: 18px;text-decoration: none;" href="#" inspiration pack>
+                                  font-size: 18px;text-decoration: none;" href="/blog" inspiration pack>
                                         Adidas Falcon nổi bật mùa Hè với phối màu color block
                                     </a>
                                 </h3>
@@ -553,7 +553,7 @@
                     <div class="col-md-4">
                         <div class="post_item">
                             <div class="post_featured">
-                                <a href="#" title="Adidas EQT Cushion ADV">
+                                <a href="/blog" title="Adidas EQT Cushion ADV">
                                     <img class="img-resize" style="padding-bottom:15px;" src="/images/shoes/new-2.jpg"
                                          alt="Saucony hồi sinh mẫu giày chạy bộ cổ điển của mình – Aya Runner">
                                 </a>
@@ -568,7 +568,7 @@
                             <div class="pro-text">
                                 <h3 class="post_title">
                                     <a style=" color: black;
-                                                  font-size: 18px;text-decoration: none;" href="#" inspiration pack>
+                                                  font-size: 18px;text-decoration: none;" href="/blog" inspiration pack>
                                         Saucony hồi sinh mẫu giày chạy bộ cổ điển của mình – Aya Runner
                                     </a>
                                 </h3>
@@ -583,7 +583,7 @@
                     <div class="col-md-4">
                         <div class="post_item">
                             <div class="post_featured">
-                                <a href="#" title="Adidas EQT Cushion ADV">
+                                <a href="/blog" title="Adidas EQT Cushion ADV">
                                     <img class="img-resize" style="padding-bottom:15px;" src="/images/shoes/new-3.jpg"
                                          alt="Nike Vapormax Plus trở lại với sắc tím mộng mơ và thiết kế chuyển màu đẹp mắt">
                                 </a>
@@ -598,7 +598,7 @@
                             <div class="pro-text">
                                 <h3 class="post_title">
                                     <a style=" color: black;
-                                      font-size: 18px;text-decoration: none;" href="#" inspiration pack>
+                                      font-size: 18px;text-decoration: none;" href="/blog" inspiration pack>
                                         Nike Vapormax Plus trở lại với sắc tím mộng mơ và thiết kế chuyển màu đẹp mắt
                                     </a>
                                 </h3>
@@ -778,30 +778,6 @@
             </div>
         </div>
     </footer>
-</div>
-<div class="registratior_custom">
-    <form action="">
-        <div class="content">
-            <div class="x-close">
-                <i class="fa fa-times"></i>
-            </div>
-            <h3>Nhận các ưu đãi cùng Runner</h3>
-            <p>Chúng tôi sẽ cập nhật các chương trình khuyến mãi mới đến bạn</p>
-            <ul>
-                <li>
-                    <span>Giảm giá sản phẩm</span>
-                </li>
-                <li>
-                    <span>Sản phẩm mới</span>
-                </li>
-                <li>
-                    <span>Sản phẩm bán chạy</span>
-                </li>
-            </ul>
-            <input type="text" placeholder="Đăng kí nhận thông tin">
-            <button class="button_register"><p>ĐĂNG KÍ</p></button>
-        </div>
-    </form>
 </div>
 <script async defer crossorigin="anonymous" src="/plugins/sdk.js"></script>
 <script src="/plugins/jquery-3.4.1/jquery-3.4.1.min.js"></script>

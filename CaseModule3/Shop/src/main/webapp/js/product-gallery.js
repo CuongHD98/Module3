@@ -3,7 +3,7 @@ $(".product-gallery__thumb img").click(function(){
     $(this).parents('.product-gallery__thumb').addClass('active');
     var img_thumb = $(this).data('image');
     var total_index =  $(this).parents('.product-gallery__thumb').index() + 1;
-    $(".gallery-index .current").html(total_index);
+    $(".gallery-index .current")(total_index);
     
     $('html, body').animate({
       scrollTop: $("#sliderproduct img[src='"+img_thumb+"']").offset().top
@@ -35,20 +35,20 @@ $(".product-gallery__thumb img").click(function(){
       }
   
       if (variant.sku != null ){
-             jQuery('#pro_sku').html('SKU: ' +variant.sku);
+             jQuery('#pro_sku')('SKU: ' +variant.sku);
            }
   
       if ( variant.available) {
-        jQuery('#detail-product .add-to-cartProduct').removeAttr('disabled').removeClass('disabled').html("<span>Thêm vào giỏ</span>");
+        jQuery('#detail-product .add-to-cartProduct').removeAttr('disabled').removeClass('disabled')("<span>Thêm vào giỏ</span>");
   
-        jQuery('#detail-product #buy-now').removeAttr('disabled').removeClass('disabled').html("<span>Mua ngay</span>").show();
+        jQuery('#detail-product #buy-now').removeAttr('disabled').removeClass('disabled')("<span>Mua ngay</span>").show();
         jQuery('#detail-product .pro-soldold').addClass('hidden');
         check_variant = true;
       } 
       else {
-        jQuery('#detail-product .add-to-cartProduct').addClass('disabled').attr('disabled', 'disabled').html("<span>Hết hàng</span>");
+        jQuery('#detail-product .add-to-cartProduct').addClass('disabled').attr('disabled', 'disabled')("<span>Hết hàng</span>");
   
-        jQuery('#detail-product #buy-now').addClass('disabled').attr('disabled', 'disabled').html("<span>Hết hàng</span>").hide();
+        jQuery('#detail-product #buy-now').addClass('disabled').attr('disabled', 'disabled')("<span>Hết hàng</span>").hide();
         var message = variant ? "Hết hàng" : "Không có hàng";
         jQuery('#detail-product .pro-soldold').removeClass('hidden')
         jQuery('#detail-product .pro-soldold').text(message);
@@ -56,7 +56,7 @@ $(".product-gallery__thumb img").click(function(){
       }
   
       if(variant.price < variant.compare_at_price){
-        //jQuery('#price-preview').html("<span>" + Haravan.formatMoney(variant.price, "{{amount}}₫") + "</span><del>" + Haravan.formatMoney(variant.compare_at_price, "{{amount}}₫") + "</del>");
+        //jQuery('#price-preview')("<span>" + Haravan.formatMoney(variant.price, "{{amount}}₫") + "</span><del>" + Haravan.formatMoney(variant.compare_at_price, "{{amount}}₫") + "</del>");
         var pro_sold = variant.price ;
         var pro_comp = variant.compare_at_price / 100;
         var sale = 100 - (pro_sold / pro_comp) ;
@@ -64,18 +64,18 @@ $(".product-gallery__thumb img").click(function(){
         var html = '<span class="pro-sale">-' + kq_sale + '%</span>';									
         html += '<span class="pro-price">' + Haravan.formatMoney(pro_sold, "{{amount}}₫") + '</span>';
         html += '<del>' + Haravan.formatMoney(variant.compare_at_price, "{{amount}}₫") + '</del>';
-        jQuery('#detail-product #price-preview').html(html);
-        jQuery('#detail-product .price-fixed-mb').html(html);
+        jQuery('#detail-product #price-preview')(html);
+        jQuery('#detail-product .price-fixed-mb')(html);
       } 
       else {
-        jQuery('#detail-product #price-preview').html("<span class='pro-price'>" + Haravan.formatMoney(variant.price, "{{amount}}₫" + "</span>"));
-        jQuery('#detail-product .price-fixed-mb').html("<span class='pro-price'>" + Haravan.formatMoney(variant.price, "{{amount}}₫" + "</span>"));
+        jQuery('#detail-product #price-preview')("<span class='pro-price'>" + Haravan.formatMoney(variant.price, "{{amount}}₫" + "</span>"));
+        jQuery('#detail-product .price-fixed-mb')("<span class='pro-price'>" + Haravan.formatMoney(variant.price, "{{amount}}₫" + "</span>"));
       }
     } 
     else {
-      jQuery('#detail-product .add-to-cartProduct').addClass('disabled').attr('disabled', 'disabled').html("<span>Hết hàng</span>");
+      jQuery('#detail-product .add-to-cartProduct').addClass('disabled').attr('disabled', 'disabled')("<span>Hết hàng</span>");
       
-      jQuery('#detail-product #buy-now').addClass('disabled').attr('disabled', 'disabled').html("<span>Hết hàng</span>").hide();
+      jQuery('#detail-product #buy-now').addClass('disabled').attr('disabled', 'disabled')("<span>Hết hàng</span>").hide();
       var message = variant ? "Hết hàng" : "Không có hàng";
       jQuery('#detail-product .pro-soldold').removeClass('hidden')
       jQuery('#detail-product .pro-soldold').text(message);

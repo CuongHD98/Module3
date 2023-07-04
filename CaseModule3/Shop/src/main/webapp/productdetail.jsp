@@ -45,7 +45,7 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
 
   <div class="container">
-    <a class="navbar-brand" href="index.html">
+    <a class="navbar-brand" href="index">
       <img src="/images/logo.png" class="logo-top" alt="">
     </a>
     <div class="desk-menu collapse navbar-collapse justify-content-md-center" id="navbarNav">
@@ -54,20 +54,20 @@
 
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="index.html">Trang chủ</a>
+          <a class="nav-link" href="/index">Trang chủ</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="Product.html">BỘ SƯU TẬP</a>
+          <a class="nav-link" href="/product">BỘ SƯU TẬP</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="introduce.html">GIỚI THIỆU</a>
+          <a class="nav-link" href="/introduce">GIỚI THIỆU</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="blog.html">BLOG</a>
+          <a class="nav-link" href="/blog">BLOG</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="Contact.html">LIÊN HỆ</a>
+          <a class="nav-link" href="/contact">LIÊN HỆ</a>
         </li>
       </ul>
     </div>
@@ -148,7 +148,7 @@
                 <td class="text-right" id="total-view-cart">4,800,000₫</td>
               </tr>
               <tr>
-                <td><a href="viewcart.html" class="linktocheckout btn btn-success" style="color: white">Thanh toán</a></td>
+                <td><a href="viewcart" class="linktocheckout btn btn-success" style="color: white">Thanh toán</a></td>
               </tr>
               </tbody>
             </table>
@@ -188,10 +188,10 @@
 
                     <div class="product-gallery__thumb  active" id="img1">
                       <a class="product-gallery__thumb-placeholder" href="javascript:void(0);"
-                         data-image="/images/detailproduct/1.jpg"
-                         data-zoom-image="/images/detailproduct/1.jpg">
-                        <img src="/images/detailproduct/1.jpg"
-                             data-image="/images/detailproduct/1.jpg"
+                         data-image="${viewShoe.url}"
+                         data-zoom-image="${viewShoe.url}">
+                        <img src="${viewShoe.url}"
+                             data-image="${viewShoe.url}"
                              alt="Nike Air Max 90 Essential" grape="">
                       </a>
                     </div>
@@ -205,7 +205,7 @@
 
                     <li class="product-gallery-item gallery-item
                         current " id="imgg1a">
-                      <img class="product-image-feature " src="/images/detailproduct/1.jpg"
+                      <img class="product-image-feature " src="${viewShoe.url}"
                            alt="Nike Air Max 90 Essential" grape="">
                     </li>
 
@@ -242,10 +242,10 @@
                   <div class=" item">
                     <div class="product-gallery__thumb  >
                       <a class=" product-gallery__thumb-placeholder href="javascript:void(0);"
-                         data-image="/images/detailproduct/1.jpg"
-                         data-zoom-image="/images/detailproduct/1.jpg">
-                      <img src="/images/detailproduct/1.jpg"
-                           data-image="/images/detailproduct/1.jpg"
+                         data-image="${viewShoe.url}"
+                         data-zoom-image="${viewShoe.url}">
+                      <img src="${viewShoe.url}"
+                           data-image="${viewShoe.url}"
                            alt="Nike Air Max 90 Essential" grape="">
                       </a>
                     </div>
@@ -257,21 +257,21 @@
                 product-content-desc" id="detail-product">
               <div class="product-content-desc-1">
                 <div class="product-title">
-                  <h1>Nike Air Max 90 Essential "Grape"</h1>
-                  <span id="pro_sku">SKU: S-0015-1</span>
+                  <h1>${viewShoe.name}</h1>
+                  <span id="pro_sku">${viewShoe.id}</span>
                 </div>
-                <div class="product-price" id="price-preview"><span class="pro-price">4,800,000₫</span>
+                <div class="product-price" id="price-preview"><span class="pro-price">${viewShoe.price}₫</span>
                 </div>
-                <form id="add-item-form" action="/cart/add" method="post" class="variants clearfix">
+                <form id="add-item-form" action="/login" method="post" class="variants clearfix">
                   <div class="select clearfix">
                     <div class="selector-wrapper"><label for="product-select-option-0">Màu
                       sắc</label><span
-                            class="custom-dropdown custom-dropdown--white"><select class="single-option-selectorcustom-dropdown__select
-                                                                custom-dropdown__select--white" data-option="option1"
-                                                                                   id="product-select-option-0">
-<option value="Tím">Tím</option>
-                                                              <option value="Xanh">Xanh</option>
-                                                            </select></span>
+                            class="custom-dropdown custom-dropdown--white">
+                      <select class="single-option-selectorcustom-dropdown__select
+                             custom-dropdown__select--white" data-option="option1" id="product-select-option-0">
+                        <option value="Tím">Tím</option>
+                        <option value="Xanh">Xanh</option>
+                      </select></span>
                     </div>
                     <div class="selector-wrapper"><label for="product-select-option-1">Kích
                       thước</label><span
@@ -370,7 +370,7 @@
                     </script>
 
                     <div class="wrap-addcart clearfix">
-                      <a href="viewcart.html">
+                      <a href="/login">
                         <button type="button" class="btn btn-success" style="width: 100%">
                           Thêm vào giỏ hàng
                         </button></a>
@@ -418,7 +418,7 @@
                 <div class="col-md-3 col-sm-6 col-xs-6 col-6">
                   <div class="product-block">
                     <div class="product-img fade-box">
-                      <a href="#" title="Adidas EQT Cushion ADV" class="img-resize">
+                      <a href="/product" title="Adidas EQT Cushion ADV" class="img-resize">
                         <img src="/images/shoes/800502_01_e92c3b2bb8764b52a791846d84a3a360_grande.jpg"
                              alt="Adidas EQT Cushion ADV" class="lazyloaded">
                         <img src="/images/shoes/shoes fade 1.jpg" alt="Adidas EQT Cushion ADV"
@@ -429,7 +429,7 @@
                     <div class="product-detail clearfix">
                       <div class="pro-text">
                         <a style="color: black;
-                            font-size: 14px;text-decoration: none;" href="#" title="Adidas EQT Cushion ADV" inspiration
+                            font-size: 14px;text-decoration: none;" href="/product" title="Adidas EQT Cushion ADV" inspiration
                            pack>
                           Adidas EQT Cushion ADV "North America"
                         </a>
@@ -443,7 +443,7 @@
                 <div class="col-md-3 col-sm-6 col-xs-6 col-6">
                   <div class="product-block">
                     <div class="product-img fade-box">
-                      <a href="#" title="Adidas Nmd R1" class="img-resize">
+                      <a href="/product" title="Adidas Nmd R1" class="img-resize">
                         <img src="/images/shoes/201493_1_017364c87c3e4802a8cda5259e3d5a95_grande.jpg"
                              alt="Adidas Nmd R1"
                              class="lazyloaded">
@@ -455,7 +455,7 @@
                     <div class="product-detail clearfix">
                       <div class="pro-text">
                         <a style="color: black;
-                            font-size: 14px;text-decoration: none;" title="Adidas Nmd R1" href="">
+                            font-size: 14px;text-decoration: none;" title="Adidas Nmd R1" href="/product">
                           Adidas Nmd R1 "Villa Exclusive"
                         </a>
                       </div>
@@ -468,7 +468,7 @@
                 <div class="col-md-3 col-sm-6 col-xs-6 col-6">
                   <div class="product-block">
                     <div class="product-img fade-box">
-                      <a href="#" title="Adidas PW Solar HU NMD" class="img-resize">
+                      <a href="/product" title="Adidas PW Solar HU NMD" class="img-resize">
                         <img src="/images/shoes/805266_02_b8b2cdd1782246febf8879a44a7e5021_grande.jpg"
                              alt="Adidas PW Solar HU NMD" class="lazyloaded">
                         <img src="/images/shoes/shoes fade 3.jpg" alt="Adidas PW Solar HU NMD"
@@ -479,7 +479,7 @@
                     <div class="product-detail clearfix">
                       <div class="pro-text">
                         <a style="color: black;
-                            font-size: 14px;text-decoration: none;" href="#" title="Adidas PW Solar HU NMD" inspiration
+                            font-size: 14px;text-decoration: none;" href="/product" title="Adidas PW Solar HU NMD" inspiration
                            pack>
                           Adidas PW Solar HU NMD "Inspiration Pack"
                         </a>
@@ -493,7 +493,7 @@
                 <div class="col-md-3 col-sm-6 col-xs-6 col-6">
                   <div class="product-block">
                     <div class="product-img fade-box">
-                      <a href="#" title="Adidas Ultraboost W" class="img-resize">
+                      <a href="/product" title="Adidas Ultraboost W" class="img-resize">
                         <img src="/images/shoes/801432_01_b16d089f8bda434bacfe4620e8480be1_grande.jpg"
                              alt="Adidas Ultraboost W" class="lazyloaded">
                         <img src="/images/shoes/shoes fade 4.jpg" alt="Adidas Ultraboost W"
@@ -504,7 +504,7 @@
                     <div class="product-detail clearfix">
                       <div class="pro-text">
                         <a style="color: black;
-                            font-size: 14px;text-decoration: none;" href="#" title="Adidas Ultraboost W" inspiration
+                            font-size: 14px;text-decoration: none;" href="/product" title="Adidas Ultraboost W" inspiration
                            pack>
                           Adidas Ultraboost W
                         </a>
@@ -534,7 +534,7 @@
       </div>
       <div class="owl-carousel owl-theme owl-product1">
 
-        <div class="item"><img src="/images/detailproduct/1.jpg" alt="">
+        <div class="item"><img src="${viewShoe.url}" alt="">
         </div>
 
       </div>

@@ -13,6 +13,7 @@ import java.util.List;
 public class SizeDAO {
     private static final String INSERT_SIZE_SQL = "INSERT INTO sizes (size) VALUES (?);";
     private static final String SELECT_SIZE_BY_ID = "select * from sizes where id =?";
+    private static final String SELECT_SIZE_BY_SIZE = "select * from sizes where size =?";
     private static final String SELECT_ALL_SIZE = "select * from sizes";
     private static final String DELETE_SIZE_SQL = "delete from sizes where id = ?;";
     private static final String UPDATE_SIZE_SQL = "update sizes set size = ? where id = ?;";
@@ -76,5 +77,19 @@ public class SizeDAO {
             rowUpdated = statement.executeUpdate() > 0;
         }
         return rowUpdated;
+    }
+    public Size selectSizeBySize(int sizeN) {
+        Size size = null;
+        try (PreparedStatement preparedStatement = connection.prepareStatement(SELECT_SIZE_BY_SIZE);) {
+            preparedStatement.setInt(1, sizeN);
+            ResultSet rs = preparedStatement.executeQuery();
+            while (rs.next()) {
+                int id = rs.getInt("id");
+                size = new Size(id, sizeN);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return size;
     }
 }

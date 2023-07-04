@@ -290,8 +290,8 @@
                                 </p>
                             </a>
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownProfile">
-                                <a class="dropdown-item" target="_blank" href="Identity/Account/Login.html">Login</a>
-                                <a class="dropdown-item" target="_blank" href="Identity/Account/Register.html">Register</a>
+                                <a class="dropdown-item" target="_blank" href="Identity/Account/Login">Login</a>
+                                <a class="dropdown-item" target="_blank" href="Identity/Account/Register">Register</a>
 
                             </div>
                         </li>
@@ -420,7 +420,7 @@
                     <script>
                         document.write(new Date().getFullYear())
                     </script>, made with <i class="material-icons">favorite</i> by
-                    <a href="index.html" target="_blank">CuongHD Design</a> for a better web.
+                    <a href="index" target="_blank">CuongHD Design</a> for a better web.
                 </div>
             </div>
         </footer>
@@ -571,7 +571,7 @@
 
             window_width = $(window).width();
 
-            fixed_plugin_open = $('.sidebar .sidebar-wrapper .nav li.active a p').html();
+            fixed_plugin_open = $('.sidebar .sidebar-wrapper .nav li.active a p')();
 
             if (window_width > 767 && fixed_plugin_open == 'Dashboard') {
                 if ($('.fixed-plugin .dropdown').hasClass('show-dropdown')) {

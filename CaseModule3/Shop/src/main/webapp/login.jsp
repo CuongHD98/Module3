@@ -32,7 +32,7 @@
 
 <body>
 <div class="header">
-    <a style="color: #ffffff;text-decoration: none;" href="index.html">MIỄN PHÍ VẬN CHUYỂN VỚI ĐƠN HÀNG NỘI THÀNH > 300K
+    <a style="color: #ffffff;text-decoration: none;" href="index">MIỄN PHÍ VẬN CHUYỂN VỚI ĐƠN HÀNG NỘI THÀNH > 300K
         - ĐỔI TRẢ TRONG 30 NGÀY - ĐẢM BẢO CHẤT LƯỢNG</a>
 </div>
 
@@ -41,26 +41,26 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
 
     <div class="container">
-        <a class="navbar-brand" href="index.html">
+        <a class="navbar-brand" href="index">
             <img src="/images/logo.png" class="logo-top" alt="">
         </a>
         <div class="desk-menu collapse navbar-collapse justify-content-md-center" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item ">
-                    <a class="nav-link" href="index.html">TRANG CHỦ</a>
+                    <a class="nav-link" href="/index">TRANG CHỦ</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="Product.html">BỘ SƯU TẬP</a>
+                    <a class="nav-link" href="/product">BỘ SƯU TẬP</a>
                 </li>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="introduce.html">GIỚI THIỆU</a>
+                    <a class="nav-link" href="introduce">GIỚI THIỆU</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="blog.html">BLOG</a>
+                    <a class="nav-link" href="blog">BLOG</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="Contact.html">LIÊN HỆ</a>
+                    <a class="nav-link" href="/contact">LIÊN HỆ</a>
                 </li>
             </ul>
         </div>
@@ -77,10 +77,10 @@
                 <div class="justify-content-md-center">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link" href="index.html">TRANG CHỦ</a>
+                            <a class="nav-link" href="index">TRANG CHỦ</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="Product.html">BỘ SƯU TẬP</a>
+                            <a class="nav-link" href="Product">BỘ SƯU TẬP</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle aaaa" href="#" id="navbarDropdown" role="button"
@@ -91,22 +91,22 @@
 
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="border:0;">
-                                <a class="dropdown-item" href="detailproduct.html" title="Sản phẩm - Style 1">Sản phẩm -
+                                <a class="dropdown-item" href="detailproduct" title="Sản phẩm - Style 1">Sản phẩm -
                                     Style 1</a>
-                                <a class="dropdown-item" href="detailproduct.html" title="Sản phẩm - Style 2">Sản phẩm -
+                                <a class="dropdown-item" href="detailproduct" title="Sản phẩm - Style 2">Sản phẩm -
                                     Style 2</a>
-                                <a class="dropdown-item" href="detailproduct.html" title="Sản phẩm - Style 3">Sản phẩm -
+                                <a class="dropdown-item" href="detailproduct" title="Sản phẩm - Style 3">Sản phẩm -
                                     Style 3</a>
                             </div>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="introduce.html">GIỚI THIỆU</a>
+                            <a class="nav-link" href="introduce">GIỚI THIỆU</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="blog.html">BLOG</a>
+                            <a class="nav-link" href="blog">BLOG</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="Contact.html">LIÊN HỆ</a>
+                            <a class="nav-link" href="Contact">LIÊN HỆ</a>
                         </li>
                     </ul>
                 </div>
@@ -223,7 +223,7 @@
                                 <td class="text-right" id="total-view-cart">4,800,000₫</td>
                             </tr>
                             <tr>
-                                <td><a href="viewcart.html" class="linktocheckout btn btn-success" style="color: white">Thanh
+                                <td><a href="viewcart" class="linktocheckout btn btn-success" style="color: white">Thanh
                                     toán</a></td>
                             </tr>
                             </tbody>
@@ -273,7 +273,6 @@
                         </div>
 
                     </div>
-
                 </form>
             </div>
             <div class="signin-right " id="b-sign">
