@@ -5,12 +5,10 @@ import com.example.shop.DAO.order.OrderDetailDAO;
 import com.example.shop.DAO.product.ShoeDAO;
 import com.example.shop.DAO.product.ShoeDetailDAO;
 import com.example.shop.DAO.view.ViewShoeDetailDAO;
-import com.example.shop.model.Order;
-import com.example.shop.model.OrderDetail;
-import com.example.shop.model.Shoe;
-import com.example.shop.model.ShoeDetail;
+import com.example.shop.model.*;
 import com.example.shop.model.view.ViewShoeDetail;
 
+import javax.servlet.http.HttpSession;
 import java.util.ArrayList;
 import java.util.List;
 

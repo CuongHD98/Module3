@@ -8,6 +8,7 @@ import com.example.shop.DAO.product.ShoeDAO;
 import com.example.shop.DAO.product.ShoeDetailDAO;
 import com.example.shop.DAO.product.SizeDAO;
 import com.example.shop.DAO.view.ViewShoeDAO;
+import com.example.shop.DAO.view.ViewShoeDetailDAO;
 import com.example.shop.model.*;
 import com.example.shop.model.view.ViewShoeDetail;
 import com.example.shop.service.ShowListOrder;
@@ -23,6 +24,7 @@ import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.sql.SQLException;
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 
 @WebServlet(name = "userorder", value = "/user/order")
@@ -36,6 +38,8 @@ public class UserOrderServlet extends HttpServlet {
     private SizeDAO sizeDAO = new SizeDAO();
     private StatusDAO statusDAO = new StatusDAO();
     private ShowListOrder showListOrder = new ShowListOrder();
+    private ViewShoeDetailDAO viewShoeDetailDAO = new ViewShoeDetailDAO();
+
 
     public void init() {
         orderDAO = new OrderDAO();
@@ -46,6 +50,7 @@ public class UserOrderServlet extends HttpServlet {
         sizeDAO = new SizeDAO();
         statusDAO = new StatusDAO();
         showListOrder = new ShowListOrder();
+        viewShoeDetailDAO = new ViewShoeDetailDAO();
     }
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -80,7 +85,20 @@ public class UserOrderServlet extends HttpServlet {
 //            }
 //        }
 
-        List<ShowOrder> showOrderList = showListOrder.getShowOrderList();
+//        List<ShowOrder> showOrderList = showListOrder.getShowOrderList();
+        List<ShowOrder> showOrderList = new ArrayList<>();
+        List<Order> orderList = orderDAO.selectAllOrder();
+        for (Order order : orderList) {
+            if (order.getUser_id() == account.getId()) {
+                List<OrderDetail> orderDetailList = orderDetailDAO.selectOrderDetailByOrderId(order.getId());
+                List<ViewShoeDetail> viewShoeDetailList = new ArrayList<>();
+                for (OrderDetail orderDetail : orderDetailList) {
+                    ViewShoeDetail viewShoeDetail = viewShoeDetailDAO.selectViewShoeDetailByOrderId(orderDetail.getOrder_id(), orderDetail.getShoedetail_id());
+                    viewShoeDetailList.add(viewShoeDetail);
+                }
+                showOrderList.add(new ShowOrder(order.getId(), viewShoeDetailList, order.getTotal_amount(),order.getStatus_id()));
+            }
+        }
         request.setAttribute("showOrderList", showOrderList);
         RequestDispatcher dispatcher = request.getRequestDispatcher("/user/userorder.jsp");
         dispatcher.forward(request, response);
